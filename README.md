@@ -7,8 +7,59 @@
 <!--horizontal rule-->
 ___
 
+<!--slockquote-->
+### *Updation*
+run this code in terminal
+>pip install dictionarify --upgrade
+
+<!--horizontal rule-->
+___
+<!--slockquote-->
+### *Documentation*
+how to get the documentation of the my library and type this in python script
+
+<!-- Github Markdown -->
+<!-- Code Block -->
+```python
+from dictionarify import Flexi
+print(Flexi.__doc__)
+# click the link
+```
+
+<!--horizontal rule-->
+___
+
 ## **Introduction**
 It is a library which consists of a class called **'Flexi'** which have methods similar to list methods like sort , insert etc for dictionary.
+
+## **METHODS OF dictionarify**
+1. **search_all(lists:list,value,index_range:tuple)**:
+
+It returns the index of the first occurrence of the value in the list, or a tuple of all the indices
+of the value in the list if the index range is specified
+    
+* lists: enter the list where you wnat to run this function
+* value: the value you want to search for
+* index_range: tuple
+
+<!-- Github Markdown -->
+<!-- Code Block -->
+```python
+import dictionarify
+'''
+in the third argument you have the give the start and stop index in a tuple
+'''
+'''
+when index_range = (0,4) it means it searches from index 0 to index 3.
+in second case index_range = (0,2) it means it searches from index0 to index 1
+'''
+print(dictionarify.search_all([1,2,3,1],1,(0,4)))# (0, 3)
+
+print(dictionarify.search_all([1,2,3,1],1,(0,2)))# (0,)
+```
+
+<!--horizontal rule-->
+___
 
 ## **METHODS OF Flexi**
 
@@ -312,6 +363,19 @@ It takes a dictionary, slices it, and returns a new dictionary
 * return_type: if you want to update the dictionary, then set it to "update", else set it to
 "no_update", defaults to no_update (optional)
 
+<!-- Github Markdown -->
+<!-- Code Block -->
+<!--horizontal rule-->
+___
+
+```python
+from dictionarify import Flexi
+x = Flexi({"a":1,"b":2,"c":3,"d":4,"e":5})
+print(x.d_slicing(0,4))# {'a': 1, 'b': 2, 'c': 3, 'd': 4} 
+```
+<!--horizontal rule-->
+___
+
 16. **swap_keys(self, initial_index: int, final_index: int, return_type="no_update")**:
 It swaps the keys of the dictionary at the given indices
         
@@ -334,7 +398,7 @@ print(x.swap_keys(0,4))#{'e': 1, 'b': 2, 'c': 3, 'd': 4, 'a': 5}
 <!--horizontal rule-->
 ___
 
-17. swap_values(self, initial_index: int, final_index: int, return_type="no_update"):
+17. **swap_values(self, initial_index: int, final_index: int, return_type="no_update")**:
 
 It swaps the values of two keys in a dictionary
         
@@ -357,7 +421,7 @@ print(x.swap_values(0,4))# {'a': 5, 'b': 2, 'c': 3, 'd': 4, 'e': 1}
 <!--horizontal rule-->
 ___
 
-18. count_value(self, value):
+18. **count_value(self, value)**:
 
 It returns the number of times a value appears in the dictionary
         
@@ -377,7 +441,7 @@ print(x.count_value(1))# 2
 <!--horizontal rule-->
 ___
 
-19. has_similar_value(self, value):
+19. **has_similar_value(self, value)**:
 
 If the value is present in the dictionary, and the count of the value is greater than 1, then return True, otherwise return False
         
@@ -397,7 +461,7 @@ print(x.has_similar_value(1))# True
 <!--horizontal rule-->
 ___
 
-20. similar_values(self, value):
+20. **similar_values(self, value)**:
 
 It returns a dictionary of all the keys and values that have the same value as the value you pass to
 the function
