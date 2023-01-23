@@ -25,6 +25,9 @@ from dictionarify import Flexi
 print(Flexi.__doc__)
 # click the link
 ```
+#or
+go to this link https://pypi.org/project/dictionarify/0.0.6/
+and click on the link given in long description.
 
 <!--horizontal rule-->
 ___
