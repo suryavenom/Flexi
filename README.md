@@ -184,12 +184,16 @@ print(x.d_item(1))# ('b', 2)
 <!--horizontal rule-->
 ___
 
-8. **d_exchange(self, no_of_exchanges=1, return_type="no_update")**:
+8. **d_exchange(self, no_of_exchanges=1,entanglement = True, return_type="no_update")**:
 
 It exchanges the keys and values of a dictionary
-
-* no_of_exchanges: the number of times the dictionary is exchanged, defaults to 1 (optional)
-* return_type: if you want to update the dictionary or not, defaults to no_update (optional)
+        
+* no_of_exchanges: the number of times the dictionary is exchanged, defaults to 1 (optional),
+defaults to 1 (optional)
+* entanglement: if the dictionary has identical values, then it will be entangled, defaults to
+True (optional).it will be clear in the example or when you use this argument it should be either True or False.
+* return_type: if you want to update the dictionary or not, defaults to no_update (optional),
+defaults to no_update (optional)
 <!--horizontal rule-->
 ___
 
@@ -210,7 +214,10 @@ print(x.d_exchange())# {1: 'a', 2: 'b', 3: 'c'}
 print(dictionary)# {'a': 1, 'b': 2, 'c': 3}
 print(x.d_exchange(return_type="update"))# None
 print(dictionary)# {1: 'a', 2: 'b', 3: 'c'}
-
+'----------------------------------------------'
+y = Flexi({"a":1,"b":2,"c":1})
+print(y.d_exchange(entanglement=True))# {'b': 2, ('a', 'c'): 1}
+print(y.d_exchange(entanglement=False))# Exception: the dictionary has identical values so it cannot be exchanged
 ```
 <!--horizontal rule-->
 ___
@@ -308,10 +315,12 @@ print(x.d_insert(1,"b",2))# {'a': 1, 'b': 2, 'c': 3, 'd': 4}
 <!--horizontal rule-->
 ___
 
-13. **d_remove(self, index: int)**:
+13. **d_remove(self, index_list: int,return_type: str = "no_update")**:
 
-It takes the dictionary, copies it, and then removes the key at the index
+It takes the dictionary, and then removes the key at the index
 * index: the index of the item to be removed
+* return_type: If it is "update", then the dictionary is updated. If it is "no_update", then a
+new dictionary is returned, defaults to no_update
 
 <!-- Github Markdown -->
 <!-- Code Block -->
