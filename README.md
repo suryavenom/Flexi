@@ -193,8 +193,8 @@ It exchanges the keys and values of a dictionary
         
 * no_of_exchanges: the number of times the dictionary is exchanged, defaults to 1 (optional),
 defaults to 1 (optional)
-* entanglement: if the dictionary has identical values, then it will be entangled, defaults to
-True (optional).it will be clear in the example or when you use this argument it should be either True or False.
+* entanglement: if True, it will exchange the dictionary even if it has identical values,
+defaults to True (optional) else it will show error message.
 * return_type: if you want to update the dictionary or not, defaults to no_update (optional),
 defaults to no_update (optional)
 <!--horizontal rule-->
