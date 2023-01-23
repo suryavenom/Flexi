@@ -334,7 +334,10 @@ ___
 from dictionarify import Flexi
 dictionary = {"a": 1, "b": 2,"c": 3}
 x = Flexi(dictionary)
-print(x.d_remove(1))# {'a': 1, 'c': 3}
+# the indices that you are giving as argument should be in a list
+print(x.d_remove([1]))# {'a': 1, 'c': 3}
+# to delete a slice of a dictionary
+print(x.d_remove(list(range(0,2))))#{'c': 3}
 ```
 <!--horizontal rule-->
 ___
