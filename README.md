@@ -27,7 +27,7 @@ print(Flexi.__doc__)
 ```
 #or
 go to this link https://pypi.org/project/dictionarify/0.0.6/
-and click on the link given in long description.
+and click on the link given in project description.
 
 <!--horizontal rule-->
 ___
